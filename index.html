@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+  <title>Hair Care</title>
+</head>
+
+
+<body>
+  <main class="survey">
+    <div class="container">
+      <header class="heading">
+        <h1 id="title" class='heading__title'>Hair Care Survey</h1>
+        <p class='heading__description' id="description">
+          Your opinion is important to us and we appreciate you taking the time to complete our survey. All personal
+          information will be kept confidential.
+        </p>
+      </header>
+      
+      <div class="section form">
+        <form class='form' action="submit" id="survey-form">
+          <h2 class='form__heading'>First, please tell us a little bit about yourself...</h2>
+
+          <div class="form__group">
+            <label for="name" id="name-label">Name</label>
+            <input class="text-input user-text-large" type="name" id="name" placeholder="Your name" required />
+          </div>
+
+          <div class="form__group">
+            <label for="email" id="email-label">Email</label>
+            <input class="text-input user-text-large" type="email" id="email" placeholder="Email" required />
+          </div>
+
+          <div class="form__group">
+            <label for="number" id="number-label">Age (optional)
+            </label>
+            <input class="text-input" type="number" id="number" placeholder="Age" min="16" step="1" max="100" />
+          </div>
+
+          <div class="form__group">
+            <label for="dropdown" id="dropdown">Are you...
+            </label>
+            <select class='text-input user-text-large' name="dropdown" id="dropdown" required>
+              <option value="">Please select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Non–binary/other gender identity</option>
+              <option value="no-answer">Prefer not to say</option>
+            </select>
+          </div>
+          <h2 class='form__heading'>For the next few questions, we want to know about your hair care preferences!</h2>
+
+          <div class="form__group">
+            <p>Have you changed your haircare routine in the last 6 months?</p>
+            <label class='user-select'><input name="used" type="radio" class="single-select__input" value="yes" checked /> Yes</label>
+            
+            <label class='user-select'><input name="used" type="radio" class="single-select__input" value="no" /> No</label>
+          </div>
+
+          <div class="form__group">
+            <p>What kind of hair care products do/did you use?<span>Please select all that apply.</span></p>
+            <label class='user-select'><input name="usage" type="checkbox" class="multi-select__input" value="vitalizer"
+                checked /> Hair-growth vitalizer</label>
+            <label class='user-select'><input name="usage" type="checkbox" class="multi-select__input"
+                value="conditioner" /> Conditioner</label>
+            <label class='user-select'><input name="usage" type="checkbox" class="multi-select__input" value="oil" /> Hair oil</label>
+            <label class='user-select'><input name="usage" type="checkbox" class="multi-select__input" value="straightener" /> Hair
+              straightener</label>
+            <label class='user-select'><input name="usage" type="checkbox" class="multi-select__input" value="activator" /> Curl
+              activator</label>
+            <label class='user-select'><input name="usage" type="checkbox" class="multi-select__input" value="gel" /> Hair gel</label>
+          </div>
+
+          <div class="form__group">
+            <p>How do you normally choose hair care products?<span>Please select all that apply.</span></p>
+            <label class='user-select'><input name="buy-reasons" type="checkbox" class="multi-select__input" value="brand"
+                checked /> From brands I trust &#47 know</label>
+            <label class='user-select'><input name="buy-reasons" type="checkbox" class="multi-select__input"
+                value="sale" /> What is on sale</label>
+            <label class='user-select'><input name="buy-reasons" type="checkbox" class="multi-select__input" value="recommendation" /> Friend
+              &#47 relative recommendation</label>
+            <label class='user-select'><input name="buy-reasons" type="checkbox" class="multi-select__input" value="advice" /> Doctor's
+              advice</label>
+            <label class='user-select'><input name="buy-reasons" type="checkbox" class="multi-select__input"
+                value="advertising" /> Seen an advert</label>
+            <label class='user-select'><input name="buy-reasons" type="checkbox" class="multi-select__input" value="review" /> Online review</label>
+            <label class='user-select'><input name="buy-reasons" type="checkbox" class="multi-select__input" value="ingredients" /> Product's
+              ingredients</label>
+            <label class='user-select'><input name="buy-reasons" type="checkbox" class="multi-select__input"
+                value="salon-recommend" /> Salon &#47 stylist recommendation</label>
+          </div>
+
+          <div class="form__group">
+            <p>How willing are you to try out a new product in the market?</p>
+            <label class='user-select'><input name="scale" type="radio" class="single-select__input" value="not-at-all" checked /> Not
+              willing at all</label>
+            <label class='user-select'><input name="scale" type="radio" class="single-select__input" value="not" /> Not willing</label>
+            <label class='user-select'><input name="scale" type="radio" class="single-select__input" value="depends" /> Depends</label>
+            <label class='user-select'><input name="scale" type="radio" class="single-select__input" value="willing" /> Somewhat
+              willing</label>
+            <label class='user-select'><input name="scale" type="radio" class="single-select__input" value="very-willing" /> Very
+              willing</label>
+          </div>
+
+          <div class="form__group">
+            <p>What prompts you to use a new product?<span>Please select all that apply.</span></p>
+            <label class='user-select'><input name="prompt" type="checkbox" class="multi-select__input" value="promotions" /> Promotional
+              offers</label>
+              <label class='user-select'><input name="prompt" type="checkbox" class="multi-select__input" value="hairstyle" /> For a new hair style</label>
+              <label class='user-select'><input name="prompt" type="checkbox" class="multi-select__input" value="budget"
+                  checked /> If my budget change</label>
+            <label class='user-select'><input name="prompt" type="checkbox" class="multi-select__input" value="change" /> When I need a change</label>
+            <label class='user-select'><input name="prompt" type="checkbox" class="multi-select__input" value="review" /> Review &#47
+              recommendation</label>
+          </div>
+          <div class="form__group">
+            <p>Are there any other considerations for you when deciding to change a hair product or hair routine...</p>
+            <textarea class='user-text user-text-large' name="open-end" id="open-end" placeholder='Please add any other considerations...'></textarea>
+          </div>
+
+          <div class="form__group">
+            <button type="submit" id="submit" class='btn'>Submit</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
